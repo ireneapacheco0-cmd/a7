@@ -492,8 +492,7 @@
             
             <div class="footer-bottom">
                 <span>&copy; 2026 BagHarbor Journal. Independent artisan archives. Not a commercial retail shop.</span>
-                <span>SYSTEM STATUS: COMPLIANT // GTAG: G-0LY0HY7L01</span>
-            </div>
+                </div>
         </div>
     </footer>
     <!-- Double Column Dark Footer End -->
