@@ -23,6 +23,182 @@
 
       gtag('config', 'G-0LY0HY7L01');
     </script>
+    <style>
+        /* Extra custom styles for pure image hero showcase & new sections */
+        .hero-images-only {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding: 15px;
+            background: var(--white-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .hero-img-item {
+            height: 580px;
+            overflow: hidden;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+        .hero-img-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+        .hero-img-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Image & Text Split Section */
+        .split-img-text {
+            padding: 100px 0;
+            background: var(--bg-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .split-row {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+        .split-col-img {
+            flex: 1;
+            overflow: hidden;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            height: 480px;
+        }
+        .split-col-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .split-col-text {
+            flex: 1;
+        }
+        .split-col-text span {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--accent-bronze);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .split-col-text h2 {
+            font-family: var(--font-serif);
+            font-size: 36px;
+            color: var(--accent-color);
+            margin-bottom: 25px;
+        }
+        .split-col-text p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-color);
+            margin-bottom: 30px;
+        }
+
+        /* Hardware Lab Section */
+        .hardware-lab {
+            padding: 100px 0;
+            background: var(--white-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .hardware-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+        .hardware-card {
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        .hardware-card:hover {
+            border-color: var(--accent-bronze);
+            transform: translateY(-3px);
+        }
+        .hardware-card h4 {
+            font-family: var(--font-serif);
+            font-size: 20px;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+        .hardware-card p {
+            font-size: 14px;
+            margin: 0;
+            opacity: 0.8;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 100px 0;
+            background: var(--bg-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .testimonial-card {
+            background: var(--white-color);
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            border-radius: 4px;
+            position: relative;
+        }
+        .testimonial-card p {
+            font-size: 15px;
+            font-style: italic;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+        .testimonial-author {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+        }
+        .testimonial-author h5 {
+            font-family: var(--font-serif);
+            font-size: 16px;
+            color: var(--accent-color);
+            margin: 0;
+        }
+        .testimonial-author span {
+            font-size: 12px;
+            color: var(--accent-bronze);
+            font-weight: 700;
+        }
+        
+        @media (max-width: 992px) {
+            .hero-images-only {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            .hero-img-item {
+                height: 350px;
+            }
+            .split-row {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .split-col-img {
+                height: 300px;
+                width: 100%;
+            }
+            .hardware-grid {
+                grid-template-columns: 1fr;
+            }
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -69,35 +245,43 @@
 	</header>
 	<!-- Header End -->
    
-    <!-- Asymmetric Magazine Hero Section Start (Image Section 1) -->
-    <section class="hero-asymmetric">
+    <!-- Fullscreen Pure Image Hero Showcase Start (Image Section 1 - Text Removed) -->
+    <section class="hero-images-only">
+        <!-- Image 1 -->
+        <div class="hero-img-item" data-reveal="left">
+            <img src="assets/img/hero.jpg" alt="Artisan sewing details on leather bag">
+        </div>
+        <!-- Image 2 -->
+        <div class="hero-img-item" data-reveal="zoom">
+            <img src="assets/img/coll_1.jpg" alt="Luxury brown leather handbag close">
+        </div>
+        <!-- Image 3 -->
+        <div class="hero-img-item" data-reveal="right">
+            <img src="assets/img/coll_2.jpg" alt="Artisan leather backpack display">
+        </div>
+    </section>
+    <!-- Fullscreen Pure Image Hero Showcase End -->
+
+    <!-- Image & Text Split Section Start -->
+    <section class="split-img-text">
         <div class="container">
-            <div class="hero-grid">
-                <!-- Left: 70% Asymmetric Image & Text Block -->
-                <div class="hero-left-col" data-reveal="left">
-                    <img src="assets/img/hero.jpg" alt="Artisan sewing details on leather bag">
-                    <div class="hero-text-overlay">
-                        <h1>Calibrating bounds for leather wear</h1>
-                        <p>We analyze needle stitch tensions, compartment heights, and strap load deflection lines to document high-performance leather bag designs.</p>
-                    </div>
+            <div class="split-row">
+                <!-- Left: Leather Craftsman Cutting -->
+                <div class="split-col-img" data-reveal="left">
+                    <img src="assets/img/prod_6.jpg" alt="Craftsman cutting leather hide at table">
                 </div>
                 
-                <!-- Right: 30% Tan Highlight Box -->
-                <div class="hero-right-col" data-reveal="right">
-                    <div>
-                        <span>Leather Workshop</span>
-                        <h2>Artisan Blueprints</h2>
-                        <p>We document thick steerhide coatings, pocket extensions, and lining wear curves to guide premium luxury craftsmen.</p>
-                    </div>
-                    
-                    <div>
-                        <a href="contact.html" class="btn-default w-100 text-center" style="background: var(--white-color); color: var(--accent-bronze);">Book Atelier Plan</a>
-                    </div>
+                <!-- Right: Content Details -->
+                <div class="split-col-text" data-reveal="right">
+                    <span>Leather Anatomy</span>
+                    <h2>Handcrafted for lifelong endurance.</h2>
+                    <p>We analyze needle stitch tensions, compartment heights, and strap load deflection lines to document high-performance leather bag designs. By calibrating rivet reinforcement layouts and custom pocket divisions, our blueprints protect your briefcases and travel backpacks from structural wear.</p>
+                    <a href="about.html" class="btn-default">Learn About Atelier</a>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Asymmetric Magazine Hero End -->
+    <!-- Image & Text Split Section End -->
 
     <!-- Bento Leather Pillars Section Start (Image Section 2) -->
     <section class="bento-section">
@@ -139,6 +323,40 @@
     </section>
     <!-- Bento Leather Pillars End -->
 
+    <!-- New Section A: The Hardware Laboratory Start -->
+    <section class="hardware-lab">
+        <div class="container">
+            <div class="section-title" data-reveal>
+                <span>Hardware Lab</span>
+                <h2>Premium Accessories & Metals</h2>
+            </div>
+            
+            <div class="hardware-grid">
+                <!-- Metal 1 -->
+                <div class="hardware-card" data-reveal="zoom">
+                    <h4>Sand-cast Brass</h4>
+                    <p>Solid brass pieces cast in sand molds to retain organic surface texture variations and resist corrosion.</p>
+                </div>
+                <!-- Metal 2 -->
+                <div class="hardware-card" data-reveal="zoom">
+                    <h4>Copper Rivets</h4>
+                    <p>Heavy solid copper rivets hammered by hand to permanently bind handle straps to bag frames.</p>
+                </div>
+                <!-- Metal 3 -->
+                <div class="hardware-card" data-reveal="zoom">
+                    <h4>Steel Buckles</h4>
+                    <p>High-tensile carbon steel frame buckles built to secure shoulder straps under heavy travel luggage loads.</p>
+                </div>
+                <!-- Metal 4 -->
+                <div class="hardware-card" data-reveal="zoom">
+                    <h4>Paraffin Wax</h4>
+                    <p>Natural beeswax curations used to lubricate heavy metal zippers and protect stitch threads.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- New Section A End -->
+
     <!-- Handcrafted Double Showcase Start (Image Section 3) -->
     <section class="showcase-section">
         <div class="container">
@@ -171,6 +389,44 @@
         </div>
     </section>
     <!-- Handcrafted Double Showcase End -->
+
+    <!-- New Section B: Client & Craftsman Reviews Start -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-title" data-reveal>
+                <span>Client Validation</span>
+                <h2>Artisan Space Reviews</h2>
+            </div>
+            
+            <div class="testimonials-grid">
+                <!-- Card 1 -->
+                <div class="testimonial-card" data-reveal="zoom">
+                    <p>"The vegetable tanned briefcase handle holds up under thirty kilos of tools easily. The copper rivet alignments are flawless."</p>
+                    <div class="testimonial-author">
+                        <h5>Marcus Kinsley</h5>
+                        <span>Luggage Designer</span>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="testimonial-card" data-reveal="zoom">
+                    <p>"Waxed linen stitches don't snap or slip. I've taken my backpack through heavy rain, and the interior canvas remained completely dry."</p>
+                    <div class="testimonial-author">
+                        <h5>Iris Sterling</h5>
+                        <span>Travel Curator</span>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="testimonial-card" data-reveal="zoom">
+                    <p>"Strap cushion widths are calculated perfectly. Weight distributions align cleanly, making daily travel commutes effortless."</p>
+                    <div class="testimonial-author">
+                        <h5>Elena Rostova</h5>
+                        <span>Artisan Apprentice</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- New Section B End -->
 
     <!-- Leather Analytics Section Start -->
     <section class="py-5" style="background: var(--white-color); border-bottom: 1px solid var(--border-color);">
